@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+    <h1>ログイン</h1>
+    <p>ログインするにはフォームを入力してください</p>
+    <form method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="ログイン"></p>
+    </form>
+{% endblock %}
