@@ -1,0 +1,13 @@
+{% extends 'base.html '%}
+
+{% block title %}アカウント作成{% endblock %}
+
+{% block content %}
+    <h1>アカウントを作成します</h1>
+    <p>フォームを埋めてね</p>
+    <form method="post">
+        {{ user_form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="アカウント作成"></p>
+    </form>
+{% endblock %}

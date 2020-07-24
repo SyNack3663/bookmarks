@@ -10,7 +10,12 @@
             もう一度、入力してください
         </p>
     {% else %}
-        <p>フォームに入力してください</p>
+        <p>
+            フォームに入力してください
+        </p>
+        <p>
+            <a href="{% url 'register' %}">新規作成はこちら</a>
+        </p>
     {% endif %}
     <div class="login-form">
         <form action="{% url 'login' %}" method="post">
